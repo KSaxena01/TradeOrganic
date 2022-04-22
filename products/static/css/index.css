@@ -1,0 +1,13 @@
+body {
+    background-image : url('../images/landingBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+#details_div {
+    padding: 50px !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%) !important;
+}
