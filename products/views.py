@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .models import Product
 from django.views.generic.edit import CreateView
-from .forms import CreateProduct
+from .forms import CreateProduct, UploadForm
 
 def index (request):
     return render(request, 'index.html')
@@ -23,12 +23,14 @@ def market (request):
 def about (request):
     return render(request, 'AboutUs.html')
 
-class ProductCreateView(CreateView):
-    model = Product
-    form_class = CreateProduct
-
-    def form_valid(self, form):
-        self.object = form.save(commit=True)
+def list (request):
+    if request.POST:
+        form = UploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        return redirect(home)
+    
+    return render(request, 'upload.html', {'form' : UploadForm})
 
 
 
