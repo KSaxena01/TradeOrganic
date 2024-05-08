@@ -9,3 +9,5 @@ python manage.py runserver 8080
 
 # Once the server is running
 # Open the website on the local host `http://localhost:8080/products`
+
+# Access the admin controls on `http://localhost:8080/admin`
