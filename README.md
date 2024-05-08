@@ -1,4 +1,4 @@
-# TradeOrganic
+# Trade Organic
 Options Trading Website for farming products
 
 # Steps to run the server on local machine
