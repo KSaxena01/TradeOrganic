@@ -1,2 +1,11 @@
 # TradeOrganic
 Options Trading Website for farming products
+
+# To run the server
+# Run the following commands on the terminal:
+```
+python manage.py runserver 8080
+```
+
+# Once the server is running
+# Open the website on the local host `http://localhost:8080/products`
